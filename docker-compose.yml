@@ -1,0 +1,9 @@
+services:
+  mentor:
+    build: .
+    ports: ["8080:8080"]
+    restart: unless-stopped
+    volumes:
+      - ./curriculum:/app/curriculum   # generated day files land here and survive rebuilds
+      - ./data:/app/data               # SQLite progress
+    env_file: .env
