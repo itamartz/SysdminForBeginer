@@ -4,7 +4,7 @@ A self-running mentor website. The learner opens it, sees one task a day, does i
 and Claude grades it. Pass unlocks the next day. No teacher needed. ~2–3 h/day, 12 months, beginner → senior.
 
 ## Run it (Docker)
-1. Fill `.env` (gitignored): `APP_PASSWORD` (what the learner types to log in), `ANTHROPIC_API_KEY`, `SECRET_KEY`.
+1. `cp .env.example .env` and fill it in: `APP_PASSWORD` (learner login), `ANTHROPIC_API_KEY`, `SECRET_KEY`.
 2. `docker compose up -d --build`
 3. Open `http://<server>:8080`, enter the password, start with week 1 day 1.
 
